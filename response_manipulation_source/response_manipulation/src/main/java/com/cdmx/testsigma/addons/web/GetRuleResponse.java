@@ -72,6 +72,9 @@ public class GetRuleResponse extends WebAction {
         //your custom code starts here
        String Result = "{\"id\":" + var_rule_id + ",\"code\":\"" + var_rule_code + "\",\"name\":\"" + var_rule_name + "\",\"flagged\":" + var_rule_flagged + ",\"accepted\":" + var_rule_accepted + ",\"accept_ids\":" + var_rule_accept_ids + ",\"score\":" + var_rule_score + "}";
        
+       runTimeData.setKey(runtimeVar.getValue().toString());
+       runTimeData.setValue(Result);
+
        result = com.testsigma.sdk.Result.SUCCESS;
        setSuccessMessage("Parameter Testdata variable with value "+ String.valueOf(Result) +" has been stored successfully in runtime variable "+ runtimeVar.getValue().toString());
     }
