@@ -50,7 +50,7 @@ public class GetInitialPartOfRuleResponse extends WebAction {
        String var_flagged = testData4.getValue().toString();
 
          //your custom code starts here
-       String Result = "{\"id\":\"" + var_id + "\",\"type\":\"" + var_type + "\",\"tx_id\":\"" + var_tx_id + "\",\"flagged\":\"" + var_flagged +"\"";
+       String Result = "{\"id\":\"" + var_id + "\",\"type\":\"" + var_type + "\",\"tx_id\":\"" + var_tx_id + "\",\"flagged\":" + var_flagged;
 
        runTimeData.setKey(runtimeVar.getValue().toString());
        runTimeData.setValue(Result);
